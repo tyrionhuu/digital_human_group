@@ -2,7 +2,7 @@ import transformers
 import torch
 
 ## Here you paste your cloned repos location
-model_id = "/data/share_weight/Meta-Llama-3.1-70B-Instruct"
+model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"
 
 pipeline = transformers.pipeline(
     "text-generation",
