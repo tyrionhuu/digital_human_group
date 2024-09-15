@@ -64,7 +64,7 @@ def format_messages_for_llama(messages):
         formatted += f"<|start_header_id|>{message['role']}<|end_header_id|>\n\n{message['content']}<|eot_id|>\n"
     return formatted
 
-def merge_lecture(model, lectures_file):
+def merge_lecture(model, lectures_file, output_file):
     with open(lectures_file, 'r') as f:
         lectures = f.read()
     messages = [
@@ -84,6 +84,9 @@ def merge_lecture(model, lectures_file):
     response = model.tokenizer.decode(output[0], skip_special_tokens=True).strip()
     print(f"Merged lecture: {response}")
 
+    with open(output_file, 'w') as f:
+        f.write(response)
+
 def main(input_file):
     # Load the tokenizer and model
     model = transformers.AutoModelForCausalLM.from_pretrained(model_id)
@@ -100,10 +103,12 @@ def main(input_file):
     root = load_xml(input_file)
 
     # Generate the lecture for each slide
-    lectures = generate_lecture_for_slides(root, model, '../output/lectures.txt')
+    intermediate_file = '../output/intermediate_lectures.txt'
+    output_file = '../output/merged_lecture.txt'
+    lectures = generate_lecture_for_slides(root, model, intermediate_file)
 
     # Merge the lecture notes into a single document
-    merge_lecture(model, '../output/lectures.txt')
+    merge_lecture(model, intermediate_file, output_file)
 
 if __name__ == "__main__":
     input_file = '../test/test.xml'  # Modify the path as needed

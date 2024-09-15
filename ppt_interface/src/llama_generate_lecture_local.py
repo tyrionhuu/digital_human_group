@@ -89,8 +89,12 @@ def main(input_file):
     # Load the XML file
     root = load_xml(input_file)
     # Generate the lecture for each slide
-    lectures = generate_lecture_for_slides(root, llama, '../output/lectures.txt')
-    merge_lecture(llama, '../output/lectures.txt')
+    intermediate_file = '../output/intermediate_lectures.txt'
+    output_file = '../output/merged_lecture.txt'
+    lectures = generate_lecture_for_slides(root, llama, intermediate_file)
+
+    # Merge the lecture notes into a single document
+    merge_lecture(llama, intermediate_file, output_file)
 
 if __name__ == "__main__":
     input_file = '../test/test.xml'  # Modify the path as needed
