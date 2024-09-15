@@ -84,7 +84,7 @@ def merge_lecture(model, lectures_file, output_file):
     response = model.tokenizer.decode(output[0], skip_special_tokens=True).strip()
     print(f"Merged lecture: {response}")
 
-    with open(output_file, 'w') as f:
+    with open(output_file, 'w+') as f:
         f.write(response)
 
 def main(input_file):
