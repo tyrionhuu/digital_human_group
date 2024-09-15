@@ -1,7 +1,7 @@
 import transformers
 import torch
 
-model = 70
+model = 8
 
 ## Here you paste your cloned repos location
 if model == 8:
