@@ -18,7 +18,7 @@ def generate_lecture_for_slides(root, model,output_file):
         messages = [
             {
                 "role": "system",
-                "content": "You are a lecturer who is asked to write a brief summary for each slide in a presentation.",
+                "content": "You are a lecturer who is tasked to write a lecture note for each slide in a presentation.",
             },
             {
                 "role": "user",
@@ -66,7 +66,7 @@ def merge_lecture(model, lectures_file):
     messages = [
         {
             "role": "system",
-            "content": "You are a lecturer who is asked to take in all the summaries of a presentation and create a detailed lecture for all the slides.",
+            "content": "You are a lecturer who is tasked to take in all the lectures notes of a presentation and create a throughout lecture for all the slides.",
         },
         {
             "role": "user",
