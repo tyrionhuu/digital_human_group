@@ -60,7 +60,7 @@ def format_messages_for_llama(messages):
     return formatted
 
 
-def merge_lecture(model, lectures_file):
+def merge_lecture(model, lectures_file, output_file):
     with open(lectures_file, 'r') as f:
         lectures = f.read()
     messages = [
@@ -80,7 +80,8 @@ def merge_lecture(model, lectures_file):
         echo=False)
     response = output['choices'][0]['text'].strip()
     print(f"Merged lecture: {response}")
-
+    with open(output_file, 'w+') as f:
+        f.write(response)
 
 def main(input_file):
     # Load LLaMA model
@@ -91,7 +92,7 @@ def main(input_file):
     # Generate the lecture for each slide
     intermediate_file = '../output/intermediate_lectures.txt'
     output_file = '../output/merged_lecture.txt'
-    lectures = generate_lecture_for_slides(root, llama, intermediate_file)
+    # lectures = generate_lecture_for_slides(root, llama, intermediate_file)
 
     # Merge the lecture notes into a single document
     merge_lecture(llama, intermediate_file, output_file)
