@@ -89,7 +89,7 @@ def main(input_file):
     # Load the XML file
     root = load_xml(input_file)
     # Generate the lecture for each slide
-    # lectures = generate_lecture_for_slides(root, llama, '../output/lectures.txt')
+    lectures = generate_lecture_for_slides(root, llama, '../output/lectures.txt')
     merge_lecture(llama, '../output/lectures.txt')
 
 if __name__ == "__main__":
