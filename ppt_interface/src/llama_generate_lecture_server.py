@@ -2,24 +2,22 @@ import transformers
 import torch
 import xml.etree.ElementTree as ET
 
-model = 8
+model_choice = 8
 
-## Here you paste your cloned repos location
-if model == 8:
+# Set the correct model path based on the choice
+if model_choice == 8:
     model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"
-elif model == 70:
+elif model_choice == 70:
     model_id = "/data/share_weight/Meta-Llama-3.1-70B-Instruct"
 else:
-    print("Please choose a existing model to use")
-
+    raise ValueError("Please choose an existing model to use")
 
 def load_xml(input_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
     return root
 
-
-def generate_lecture_for_slides(root, model,output_file):
+def generate_lecture_for_slides(root, model, output_file):
     lectures = []
     # Iterate over each slide in the presentation
     for slide in root:
@@ -41,13 +39,10 @@ def generate_lecture_for_slides(root, model,output_file):
         formatted_messages = format_messages_for_llama(messages)
 
         # Call the model with the formatted prompt
-        output = model(
-            formatted_messages,
-            max_tokens=2048,
-            stop="<|eot_id|>",
-            echo=False)
+        inputs = model.tokenizer(formatted_messages, return_tensors="pt", truncation=True, max_length=1024).to(model.device)
+        output = model.generate(**inputs, max_new_tokens=2048)
 
-        response = output['choices'][0]['text'].strip()
+        response = model.tokenizer.decode(output[0], skip_special_tokens=True).strip()
         lectures.append(response)
         print(f"Lecture for slide: {response}")
 
@@ -60,7 +55,6 @@ def generate_lecture_for_slides(root, model,output_file):
             f.write("\n\n")
     return lectures
 
-
 def format_messages_for_llama(messages):
     """
     Formats the chat-like messages into a single string that can be processed by LLaMA.
@@ -70,41 +64,46 @@ def format_messages_for_llama(messages):
         formatted += f"<|start_header_id|>{message['role']}<|end_header_id|>\n\n{message['content']}<|eot_id|>\n"
     return formatted
 
-
 def merge_lecture(model, lectures_file):
     with open(lectures_file, 'r') as f:
         lectures = f.read()
     messages = [
         {
             "role": "system",
-            "content": "You are a lecturer who is tasked to take in all the lectures notes of a presentation and create a throughout lecture for all the slides.",
+            "content": "You are a lecturer who is tasked to take in all the lecture notes of a presentation and create a thorough lecture for all the slides.",
         },
         {
             "role": "user",
             "content": lectures
         },
     ]
-    output = model(
-        format_messages_for_llama(messages),
-        max_tokens=4096,
-        stop="<|eot_id|>",
-        echo=False)
-    response = output['choices'][0]['text'].strip()
+    formatted_messages = format_messages_for_llama(messages)
+    inputs = model.tokenizer(formatted_messages, return_tensors="pt", truncation=True, max_length=1024).to(model.device)
+    output = model.generate(**inputs, max_new_tokens=4096)
+
+    response = model.tokenizer.decode(output[0], skip_special_tokens=True).strip()
     print(f"Merged lecture: {response}")
 
-
 def main(input_file):
-    # Load LLaMA model
-    llama = transformers.pipeline(
-        'text-generation',
-        model=model_id,
-        device=0 if torch.cuda.is_available() else -1
-    )
+    # Load the tokenizer and model
+    model = transformers.AutoModelForCausalLM.from_pretrained(model_id)
+    tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+
+    # If CUDA is available, load the model onto the GPU
+    if torch.cuda.is_available():
+        model = model.cuda()
+
+    # Combine model and tokenizer in a usable object
+    model.tokenizer = tokenizer
+
     # Load the XML file
     root = load_xml(input_file)
+
     # Generate the lecture for each slide
-    lectures = generate_lecture_for_slides(root, llama, '../output/lectures.txt')
-    merge_lecture(llama, '../output/lectures.txt')
+    lectures = generate_lecture_for_slides(root, model, '../output/lectures.txt')
+
+    # Merge the lecture notes into a single document
+    merge_lecture(model, '../output/lectures.txt')
 
 if __name__ == "__main__":
     input_file = '../test/test.xml'  # Modify the path as needed
