@@ -1,9 +1,15 @@
 import transformers
 import torch
 
+model = 70
+
 ## Here you paste your cloned repos location
-# model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"
-model_id = "/data/share_weight/Meta-Llama-3.1-70B-Instruct"
+if model == 8:
+    model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"
+elif model == 70:
+    model_id = "/data/share_weight/Meta-Llama-3.1-70B-Instruct"
+else:
+    print("Please choose a existing model to use")
 
 pipeline = transformers.pipeline(
     "text-generation",
