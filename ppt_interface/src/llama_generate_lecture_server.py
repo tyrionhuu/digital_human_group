@@ -2,6 +2,7 @@ import transformers
 import torch
 import xml.etree.ElementTree as ET
 
+torch.cuda.set_device(3)
 model_choice = 8
 
 # Set the correct model path based on the choice
