@@ -95,10 +95,9 @@ def merge_lecture(model, lectures_file):
 
 def main(input_file):
     # Load LLaMA model
-    model_path = '../../models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'
     llama = transformers.pipeline(
         'text-generation',
-        model=model_path,
+        model=model_id,
         device=0 if torch.cuda.is_available() else -1
     )
     # Load the XML file
