@@ -1,22 +1,23 @@
 import transformers
 import torch
 import xml.etree.ElementTree as ET
+import argparse
 
-torch.cuda.set_device(3)
-model_choice = 8
 
-# Set the correct model path based on the choice
-if model_choice == 8:
-    model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"
-elif model_choice == 70:
-    model_id = "/data/share_weight/Meta-Llama-3.1-70B-Instruct"
-else:
-    raise ValueError("Please choose an existing model to use")
+def parse_args():
+    parser = argparse.ArgumentParser(description="Set the GPU number for model inference.")
+
+    # Add command-line argument for GPU
+    parser.add_argument('--gpu', type=int, required=True, help="GPU number to use")
+
+    return parser.parse_args()
+
 
 def load_xml(input_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
     return root
+
 
 def generate_lecture_for_slides(root, model, output_file):
     lectures = []
@@ -40,7 +41,8 @@ def generate_lecture_for_slides(root, model, output_file):
         formatted_messages = format_messages_for_llama(messages)
 
         # Call the model with the formatted prompt
-        inputs = model.tokenizer(formatted_messages, return_tensors="pt", truncation=True, max_length=1024).to(model.device)
+        inputs = model.tokenizer(formatted_messages, return_tensors="pt", truncation=True, max_length=1024).to(
+            model.device)
         output = model.generate(**inputs, max_new_tokens=2048)
 
         response = model.tokenizer.decode(output[0], skip_special_tokens=True).strip()
@@ -50,11 +52,12 @@ def generate_lecture_for_slides(root, model, output_file):
     # Save the lectures to a file
     with open(output_file, 'w') as f:
         for lecture, slide in zip(lectures, root):
-            slide_title = slide.find('title').text
+            slide_title = slide.find('title').text if slide.find('title') is not None else "Untitled Slide"
             f.write(f"Slide: {slide_title}\n")
             f.write(lecture)
             f.write("\n\n")
     return lectures
+
 
 def format_messages_for_llama(messages):
     """
@@ -64,6 +67,7 @@ def format_messages_for_llama(messages):
     for message in messages:
         formatted += f"<|start_header_id|>{message['role']}<|end_header_id|>\n\n{message['content']}<|eot_id|>\n"
     return formatted
+
 
 def merge_lecture(model, lectures_file, output_file):
     with open(lectures_file, 'r') as f:
@@ -88,7 +92,14 @@ def merge_lecture(model, lectures_file, output_file):
     with open(output_file, 'w+') as f:
         f.write(response)
 
-def main(input_file):
+
+def main(gpu_number):
+    # Set the correct model path based on the default model choice
+    model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"  # Modify as needed for the model
+
+    # Set the GPU device
+    torch.cuda.set_device(gpu_number)
+
     # Load the tokenizer and model
     model = transformers.AutoModelForCausalLM.from_pretrained(model_id)
     tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
@@ -101,6 +112,7 @@ def main(input_file):
     model.tokenizer = tokenizer
 
     # Load the XML file
+    input_file = '../test/test.xml'  # Modify the path as needed
     root = load_xml(input_file)
 
     # Generate the lecture for each slide
@@ -111,6 +123,7 @@ def main(input_file):
     # Merge the lecture notes into a single document
     merge_lecture(model, intermediate_file, output_file)
 
+
 if __name__ == "__main__":
-    input_file = '../test/test.xml'  # Modify the path as needed
-    main(input_file)
+    args = parse_args()
+    main(args.gpu)
