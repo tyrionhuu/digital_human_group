@@ -95,8 +95,8 @@ def merge_lecture(model, lectures_file, output_file):
 
 def main(gpu_number):
     # Set the correct model path based on the default model choice
-    model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"  # Modify as needed for the model
-
+    # model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"  # Modify as needed for the model
+    model_id = "/data/share_weight/Qwen2.5-7B-Instruct"
     # Set the GPU device
     torch.cuda.set_device(gpu_number)
 
