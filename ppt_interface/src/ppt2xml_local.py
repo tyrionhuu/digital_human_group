@@ -4,7 +4,7 @@ import re
 from xml.sax.saxutils import escape
 from xml.dom import minidom
 import os
-import ollama  # Import Ollama for LLaVA usage
+import ollama
 
 def call_llava(image_path):
     """
