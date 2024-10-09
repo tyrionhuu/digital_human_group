@@ -1,67 +1,125 @@
 <?xml version="1.0" ?>
 <presentation>
-  <slide>
+  <slide number="1">
     <title>Access methods for time-evolving data</title>
-    <content>Access methods for time-evolving dataPresenters : Virag Kothari ,Vandana Ayyalasomayajula                         Date: 04/21/2010</content>
+    <paragraph type="normal">Access methods for time-evolving data</paragraph>
+    <paragraph type="normal">Presenters : Virag Kothari ,Vandana Ayyalasomayajula</paragraph>
+    <paragraph type="normal"> Date: 04/21/2010</paragraph>
   </slide>
-  <slide>
+  <slide number="2">
     <title>Outline</title>
-    <content>OutlineIntroduction to temporal databasesGoal of the paperAccess method costsQueriesIndex pagination &amp;amp; Data ClusteringEfficient method design for transaction dataReferences</content>
+    <paragraph type="normal">Outline</paragraph>
+    <paragraph type="normal">Introduction to temporal databases</paragraph>
+    <paragraph type="normal">Goal of the paper</paragraph>
+    <paragraph type="normal">Access method costs</paragraph>
+    <paragraph type="normal">Queries</paragraph>
+    <paragraph type="normal">Index pagination &amp;amp; Data Clustering</paragraph>
+    <paragraph type="normal">Efficient method design for transaction data</paragraph>
+    <paragraph type="normal">References</paragraph>
   </slide>
-  <slide>
+  <slide number="3">
     <title>Introduction</title>
-    <content>IntroductionBased on time dimension Transaction time databaseValid time databaseBitemporal database</content>
+    <paragraph type="normal">Introduction</paragraph>
+    <paragraph type="normal">Based on time dimension </paragraph>
+    <paragraph type="bullet" level="1">Transaction time database</paragraph>
+    <paragraph type="bullet" level="1">Valid time database</paragraph>
+    <paragraph type="bullet" level="1">Bitemporal database</paragraph>
   </slide>
-  <slide>
+  <slide number="4">
     <title>Goal</title>
-    <content>GoalAttempt to identify the implications for access method design from support of each time dimensionIn this presentation, transaction time databases are considered.</content>
+    <paragraph type="normal">Goal</paragraph>
+    <paragraph type="normal">Attempt to identify the implications for access method design from support of each time dimension</paragraph>
+    <paragraph type="normal">In this presentation, transaction time databases are considered.</paragraph>
   </slide>
-  <slide>
+  <slide number="5">
     <title>Access Method Costs </title>
-    <content>Access Method Costs Performance of an access method depends on storage space to physically store the data records and the structures of the access methodupdate processing time (the time to update the method’s data structures as a result of a change)the query time for each of the basic queries   ( discussed in the next slide !)</content>
+    <paragraph type="normal">Access Method Costs </paragraph>
+    <paragraph type="normal">Performance of an access method depends on </paragraph>
+    <paragraph type="bullet" level="1">storage space to physically store the data records and the structures of the access method</paragraph>
+    <paragraph type="bullet" level="1">update processing time (the time to update the method’s data structures as a result of a change)</paragraph>
+    <paragraph type="bullet" level="1">the query time for each of the basic queries</paragraph>
+    <paragraph type="bullet" level="1"> ( discussed in the next slide !)</paragraph>
   </slide>
-  <slide>
+  <slide number="6">
     <title>Queries</title>
-    <content>QueriesGiven a contiguous interval T, find all objects alive during this interval.Given a key range and a contiguous time interval T, find the objects with keys in the given range that are alive during interval T.Given a key range, find the history of the objects in this range.</content>
+    <paragraph type="normal">Queries</paragraph>
+    <paragraph type="normal">Given a contiguous interval T, find all objects alive during this interval.</paragraph>
+    <paragraph type="normal">Given a key range and a contiguous time interval T, find the objects with keys in the given range that are alive during interval T.</paragraph>
+    <paragraph type="normal">Given a key range, find the history of the objects in this range.</paragraph>
   </slide>
-  <slide>
-    <title>Queries                   - Special cases !</title>
-    <content>Queries                   - Special cases !“transaction pure-timeslice”A special case of class (I) occurs when interval T is reduced to a single transaction time instant t.“transaction range-timeslice”representative case of class (II) where the time interval is reduced to a single transaction time instant.“transaction pure-key query”representative case of class (III), key range is reduced to a single key</content>
+  <slide number="7">
+    <title>Queries - Special cases !</title>
+    <paragraph type="normal">Queries - Special cases !</paragraph>
+    <paragraph type="normal">“transaction pure-timeslice”</paragraph>
+    <paragraph type="bullet" level="1">A special case of class (I) occurs when interval T is reduced to a single transaction time instant t.</paragraph>
+    <paragraph type="normal">“transaction range-timeslice”</paragraph>
+    <paragraph type="bullet" level="1">representative case of class (II) where the time interval is reduced to a single transaction time instant.</paragraph>
+    <paragraph type="normal">“transaction pure-key query”</paragraph>
+    <paragraph type="bullet" level="1">representative case of class (III), key range is reduced to a single key</paragraph>
   </slide>
-  <slide>
+  <slide number="8">
     <title>Cost parameters</title>
-    <content>Cost parametersIn the case of transaction , Bitemporal databases,n - &amp;gt; summation of insertions, deletions, and modification updates.For Valid time databases,L - &amp;gt; the number of interval objects currently stored in the method, i.e., the size of the collectiona -&amp;gt; to denote the answer size of a query in general.</content>
+    <paragraph type="normal">Cost parameters</paragraph>
+    <paragraph type="normal">In the case of transaction , Bitemporal databases,</paragraph>
+    <paragraph type="bullet" level="1">n - &amp;gt; summation of insertions, deletions, and modification updates.</paragraph>
+    <paragraph type="normal">For Valid time databases,</paragraph>
+    <paragraph type="bullet" level="1">L - &amp;gt; the number of interval objects currently stored in the method, i.e., the size of the collection</paragraph>
+    <paragraph type="normal">a -&amp;gt; to denote the answer size of a query in general.</paragraph>
   </slide>
-  <slide>
+  <slide number="9">
     <title>Index pagination &amp;amp; Data Clustering</title>
-    <content>Index pagination &amp;amp; Data ClusteringCost depends on IO cost !Performance of an index depends on how well it is ‘Paginated’Example: B+ trees.Data Clustering improves performance by storing logically near data , physically close on the disk.pure-timeslice query takes O(logBn + a/B ) page accesses. This method is more I/O efficient than another method that solves the same query in O(logBn + a) page accesses.</content>
+    <paragraph type="normal">Index pagination &amp;amp; Data Clustering</paragraph>
+    <paragraph type="normal">Cost depends on IO cost !</paragraph>
+    <paragraph type="normal">Performance of an index depends on how well it is ‘Paginated’</paragraph>
+    <paragraph type="bullet" level="1">Example: B+ trees.</paragraph>
+    <paragraph type="normal">Data Clustering improves performance by storing logically near data , physically close on the disk.</paragraph>
+    <paragraph type="bullet" level="1">pure-timeslice query takes O(logBn + a/B ) page accesses. This method is more I/O efficient than another method that solves the same query in O(logBn + a) page accesses.</paragraph>
   </slide>
-  <slide>
+  <slide number="10">
     <title>Efficient Method Design for Transaction</title>
-    <content>Efficient Method Design for TransactionTransaction Pure-Timeslice Query‘copy’ approachStores a copy of the transaction database state s(t) (timeslice) for each transaction time that at least one change occurredCopies are indexed by time t.‘log’ approachStores only the changes that occur in the database timestamped by the time instant on which they occurred.Copies indexed by time t.</content>
+    <paragraph type="normal">Efficient Method Design for Transaction</paragraph>
+    <paragraph type="normal">Transaction Pure-Timeslice Query</paragraph>
+    <paragraph type="bullet" level="1">‘copy’ approach</paragraph>
+    <paragraph type="bullet" level="2">Stores a copy of the transaction database state s(t) (timeslice) for each transaction time that at least one change occurred</paragraph>
+    <paragraph type="bullet" level="2">Copies are indexed by time t.</paragraph>
+    <paragraph type="bullet" level="1">‘log’ approach</paragraph>
+    <paragraph type="bullet" level="2">Stores only the changes that occur in the database timestamped by the time instant on which they occurred.</paragraph>
+    <paragraph type="bullet" level="2">Copies indexed by time t.</paragraph>
   </slide>
-  <slide>
-    <title>Comparison       – Transaction pure timeslice</title>
-    <content>Comparison       – Transaction pure timeslice</content>
+  <slide number="11">
+    <title>Comparison – Transaction pure timeslice</title>
+    <paragraph type="normal">Comparison – Transaction pure timeslice</paragraph>
   </slide>
-  <slide>
+  <slide number="12">
     <title>Transaction Pure Key</title>
-    <content>Transaction Pure Key“copy” and “log” solutions could be used for the pure-key query. But they are both very inefficient !!.A better solution is to store the history of each key separately, i.e., cluster data by key only.Access to a key’s (transaction time) history can be implemented by a hashing function  or B tree.The list of versions of each key can be further organized in a separate array indexed by transaction time to answer a pure-key query with time predicate .</content>
+    <paragraph type="normal">Transaction Pure Key</paragraph>
+    <paragraph type="normal">“copy” and “log” solutions could be used for the pure-key query. But they are both very inefficient !!.</paragraph>
+    <paragraph type="normal">A better solution is to store the history of each key separately, i.e., cluster data by key only.</paragraph>
+    <paragraph type="normal">Access to a key’s (transaction time) history can be implemented by a hashing function or B tree.</paragraph>
+    <paragraph type="normal">The list of versions of each key can be further organized in a separate array indexed by transaction time to answer a pure-key query with time predicate .</paragraph>
   </slide>
-  <slide>
-    <title>Costs                 – Transaction pure key</title>
-    <content>Costs                 – Transaction pure keyCost to index into hash table or B tree + cost of searching in the array.Array length can be n/B , so cost would    O( log B n) .</content>
+  <slide number="13">
+    <title>Costs – Transaction pure key</title>
+    <paragraph type="normal">Costs – Transaction pure key</paragraph>
+    <paragraph type="normal">Cost to index into hash table or B tree + cost of searching in the array.</paragraph>
+    <paragraph type="normal">Array length can be n/B , so cost would </paragraph>
+    <paragraph type="normal"> O( log B n) .</paragraph>
   </slide>
-  <slide>
+  <slide number="14">
     <title>Transaction Range-Timeslice</title>
-    <content>Transaction Range-TimesliceTo answer a range query efficiently, it is best to cluster by transaction time and key within pages.Very similar to spatial indexing concept.Two dimensions , time &amp;amp; key need to be considered.Data bounding techniqueAnother possibility data mapping, maps a record to three (or more) coordinates –transaction start_time, end-_time, and key(s)—and then uses a  multiattribute point index.</content>
+    <paragraph type="normal">Transaction Range-Timeslice</paragraph>
+    <paragraph type="normal">To answer a range query efficiently, it is best to cluster by transaction time and key within pages.</paragraph>
+    <paragraph type="normal">Very similar to spatial indexing concept.</paragraph>
+    <paragraph type="normal">Two dimensions , time &amp;amp; key need to be considered.</paragraph>
+    <paragraph type="normal">Data bounding technique</paragraph>
+    <paragraph type="normal">Another possibility data mapping, maps a record to three (or more) coordinates –transaction start_time, end-_time, and key(s)—and then uses a multiattribute point index.</paragraph>
   </slide>
-  <slide>
+  <slide number="15">
     <title>References</title>
-    <content>ReferencesBetty Salzberg, Vassilis J. Tsotras: Comparison of Access Methods forTime-Evolving Data. ACM Comput. Surv. (CSUR) 31(2):158-221 (1999)</content>
+    <paragraph type="normal">References</paragraph>
+    <paragraph type="normal">Betty Salzberg, Vassilis J. Tsotras: Comparison of Access Methods forTime-Evolving Data. ACM Comput. Surv. (CSUR) 31(2):158-221 (1999)</paragraph>
   </slide>
-  <slide>
-    <title/>
-    <content>                     Thank you!! </content>
+  <slide number="16">
+    <paragraph type="normal"> Thank you!! </paragraph>
   </slide>
 </presentation>

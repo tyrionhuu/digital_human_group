@@ -1,10 +1,14 @@
-import ppt_extraction
+import ollama
 
-def main():
-    pptx_path = "../test/test.pptx"
-    text = ppt_extraction.extract_text_from_pptx(pptx_path)
-    print(text)
+res = ollama.chat(
+	model="llava",
+	messages=[
+		{
+			'role': 'user',
+			'content': 'Describe this image:',
+			'images': ['/Users/tyrionhuu/Desktop/1.png']
+		}
+	]
+)
 
-if __name__ == "__main__":
-    main()
-
+print(res['message']['content'])

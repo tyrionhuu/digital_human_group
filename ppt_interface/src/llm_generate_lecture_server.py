@@ -93,7 +93,7 @@ def merge_lecture(model, lectures_file, output_file):
         f.write(response)
 
 
-def main(gpu_number):
+def main(gpu_number=0):
     # Set the correct model path based on the default model choice
     # model_id = "/data/share_weight/Meta-Llama-3-8B-Instruct"  # Modify as needed for the model
     model_id = "/data/share_weight/Qwen2.5-7B-Instruct"
