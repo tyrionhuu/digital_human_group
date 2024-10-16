@@ -1,0 +1,356 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d13" for="edge" attr.name="level" attr.type="long" />
+  <key id="d12" for="edge" attr.name="human_readable_id" attr.type="long" />
+  <key id="d11" for="edge" attr.name="id" attr.type="string" />
+  <key id="d10" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d9" for="edge" attr.name="description" attr.type="string" />
+  <key id="d8" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d7" for="node" attr.name="level" attr.type="long" />
+  <key id="d6" for="node" attr.name="cluster" attr.type="string" />
+  <key id="d5" for="node" attr.name="id" attr.type="string" />
+  <key id="d4" for="node" attr.name="human_readable_id" attr.type="long" />
+  <key id="d3" for="node" attr.name="degree" attr.type="long" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="&quot;FR&#201;D&#201;RIC FRAN&#199;OIS CHOPIN&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">"COMPOSER", "PIANIST"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">0</data>
+      <data key="d5">f237d54b09af49d1a6bcd55c3f433ff1</data>
+    </node>
+    <node id="&quot;&#379;ELAZOWA WOLA&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"TOWN IN POLAND, PLACE OF BIRTH FOR CHOPIN"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">1</data>
+      <data key="d5">56804fda70d243868c96ff193561d806</data>
+    </node>
+    <node id="&quot;POLAND&quot;">
+      <data key="d0">"COUNTRY"</data>
+      <data key="d1">Poland is Chopin's homeland. 
+</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3,68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">2</data>
+      <data key="d5">6ad64480d1674e5899614e552862c269</data>
+    </node>
+    <node id="&quot;ROMANTIC ERA&quot;">
+      <data key="d0">"TIME PERIOD"</data>
+      <data key="d1">"HISTORICAL PERIOD WHEN CHOPIN LIVED AND WORKED"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">3</data>
+      <data key="d5">9c64230b04804d5399e88fad5c7f2d80</data>
+    </node>
+    <node id="&quot;CLASSICAL PIANO REPERTOIRE&quot;">
+      <data key="d0">"CONCEPT"</data>
+      <data key="d1">"COLLECTION OF MUSIC PIECES FOR PIANO, INFLUENCED BY CHOPIN"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">4</data>
+      <data key="d5">16b9b7751de34ebeae6abd73ddbfb621</data>
+    </node>
+    <node id="&quot;EUROPE&quot;">
+      <data key="d0">"CONTINENT"</data>
+      <data key="d1">"WHERE CHOPIN LIVED AND WORKED, POLITICALLY TURBULENT DURING HIS LIFETIME"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">5</data>
+      <data key="d5">e7776e91ed594738941e48c7457fe8e3</data>
+    </node>
+    <node id="&quot;NICOLAS CHOPIN&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">"CHOPIN'S FATHER, FRENCH IMMIGRANT AND TEACHER"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">6</data>
+      <data key="d5">b00b5d93c1944eedac60659e90287bd2</data>
+    </node>
+    <node id="&quot;JUSTYNA&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">"CHOPIN'S MOTHER, POLISH AND MUSIC ENTHUSIAST"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">7</data>
+      <data key="d5">fbfc56c8fc05450d978e7c617bcf8c72</data>
+    </node>
+    <node id="&quot;WARSAW CONSERVATORY&quot;">
+      <data key="d0">"INSTITUTION"</data>
+      <data key="d1">"WHERE CHOPIN RECEIVED FORMAL MUSICAL TRAINING"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">8</data>
+      <data key="d5">f8ca47954fa54c81ad8c4252152a4d3f</data>
+    </node>
+    <node id="&quot;J&#211;ZEF ELSNER&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">J&#243;zef Elsner was Chopin's teacher at the Warsaw Conservatory and a music teacher. 
+
+
+</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4,8a98ffcc7965fe99d82840393f6b4715</data>
+      <data key="d3">0</data>
+      <data key="d4">9</data>
+      <data key="d5">643bf15e1f01464e805d64ab756b84b4</data>
+    </node>
+    <node id="&quot;VIENNA&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"CITY CHOPIN VISITED DURING HIS TRAVELS"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">10</data>
+      <data key="d5">70f29ec08c9c417d8535f9783e31bfa3</data>
+    </node>
+    <node id="&quot;PARIS&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">Paris was the capital city where Chopin settled and lived.  
+</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3,68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">11</data>
+      <data key="d5">e25a2dce70c84623934b5b6538107e00</data>
+    </node>
+    <node id="&quot;RUSSIAN EMPIRE&quot;">
+      <data key="d0">"COUNTRY"</data>
+      <data key="d1">"POLITICAL POWER THAT CONTROLLED POLAND DURING CHOPIN'S LIFETIME"</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">12</data>
+      <data key="d5">a81b3dd58142417395b3ab312658e60f</data>
+    </node>
+    <node id="&quot;CHOPIN&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">Chopin was a musician. 
+</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3,5b2f6049ae92b2d41fd9160460e4ae93,7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">1</data>
+      <data key="d4">13</data>
+      <data key="d5">28355e10fe2d47ddb8703063c49170b2</data>
+    </node>
+    <node id="&quot;GEORGE SAND&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">George Sand was a French writer and the romantic partner of Fr&#233;d&#233;ric Chopin.  Their relationship, however, ended in strained circumstances in 1847. 
+
+
+</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">14</data>
+      <data key="d5">4a2aaa8f03544747b271027089b27a6e</data>
+    </node>
+    <node id="&quot;TUBERCULOSIS&quot;">
+      <data key="d0">"DISEASE"</data>
+      <data key="d1">Tuberculosis was a lung disease that significantly impacted Fr&#233;d&#233;ric Chopin's health.  
+</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3,7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">15</data>
+      <data key="d5">7b03372043ec4404ae26990f6673da4c</data>
+    </node>
+    <node id="&quot;NOCTURNE&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">"Piano composition by Chopin known for its expressive nature"</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">16</data>
+      <data key="d5">c432538f200b4b089114292a9f6d0774</data>
+    </node>
+    <node id="&quot;BALLADE&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">"Dramatic piano composition by Chopin"</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">17</data>
+      <data key="d5">7cfb0ca7c5d64627885a235eb1e458e2</data>
+    </node>
+    <node id="&quot;MAZURKA&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">The Mazurka is a traditional Polish dance form that Chopin frequently incorporated into his compositions.  Characterized by irregular rhythms and modal harmonies, the Mazurka evolved from a traditional dance into a distinct musical genre under Chopin's influence. 
+
+
+</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">18</data>
+      <data key="d5">372700e1342f44d496b1b82bf122e6de</data>
+    </node>
+    <node id="&quot;MAJORCA&quot;">
+      <data key="d0">"LOCATION"</data>
+      <data key="d1">"Island where Chopin and George Sand lived in 1838-1839"</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">19</data>
+      <data key="d5">0f8831b99c1c4aa8b2602f9ee71bd903</data>
+    </node>
+    <node id="&quot;PIANO&quot;">
+      <data key="d0">"INSTRUMENT"</data>
+      <data key="d1">"Musical instrument Chopin primarily composed for"</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">20</data>
+      <data key="d5">3cf9e5506a4f42229355feaff546a81d</data>
+    </node>
+    <node id="&quot;&#201;TUDE&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">"Technical exercise in music, often by Chopin"</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">21</data>
+      <data key="d5">0f3af1d1c4bc437ca099adbaf44b35f8</data>
+    </node>
+    <node id="&quot;REVOLUTIONARY &#201;TUDE&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">"Revolutionary &#201;tude" is a famous composition by Fr&#233;d&#233;ric Chopin. It is renowned for its demanding technical aspects and profound emotional depth.  
+</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">22</data>
+      <data key="d5">b2c84bd4c85840eeb448f69b83bf190d</data>
+    </node>
+    <node id="&quot;WINTER WIND &#201;TUDE&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">"Winter Wind &#201;tude" is another famous work by Fr&#233;d&#233;ric Chopin. It is considered a notable &#233;tude, demonstrating both the composer's mastery of technical skill and his ability to imbue music with profound emotional depth and expressive power. 
+
+
+</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">23</data>
+      <data key="d5">9c3440598173439b8305f0044c10b528</data>
+    </node>
+    <node id="&quot;POLONAISE&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">The Polonaise is a traditional Polish dance form that Chopin adapted into a musical genre.  His compositions in this style often convey a sense of nationalism and pride. 
+
+
+</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">24</data>
+      <data key="d5">7ea9f34ccdd6479aa717828a70ff3cbb</data>
+    </node>
+    <node id="&quot;POLONAISE IN A-FLAT MAJOR, OP. 53&quot;">
+      <data key="d0">"MUSICAL WORK"</data>
+      <data key="d1">"Known as the 'Heroic', this polonaise by Chopin expresses patriotism and captures the spirit of Poland's struggles and aspirations."</data>
+      <data key="d2">a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">25</data>
+      <data key="d5">e15a1860c3a04717993a5b6d89b506a9</data>
+    </node>
+    <node id="&quot;FR&#201;D&#201;RIC CHOPIN&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">"MUSICIAN"</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">6</data>
+      <data key="d4">26</data>
+      <data key="d5">eb7c893a532946a896a36eda9bf6be96</data>
+    </node>
+    <node id="&quot;ENGLAND&quot;">
+      <data key="d0">"COUNTRY"</data>
+      <data key="d1">"EUROPEAN NATION"</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">27</data>
+      <data key="d5">34c98684f7d04dbb8c393b253a8a8296</data>
+    </node>
+    <node id="&quot;SCOTLAND&quot;">
+      <data key="d0">"COUNTRY"</data>
+      <data key="d1">"EUROPEAN NATION"</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">28</data>
+      <data key="d5">f3c77af0ceea44668412ecdc894343cf</data>
+    </node>
+    <node id="&quot;CHURCH OF THE MADELEINE&quot;">
+      <data key="d0">"BUILDING"</data>
+      <data key="d1">"PLACE OF WORSHIP"</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">29</data>
+      <data key="d5">c1956d2b823b4da0b68143dd28d1fbe5</data>
+    </node>
+    <node id="&quot;MOZART&quot;">
+      <data key="d0">"PERSON"</data>
+      <data key="d1">"COMPOSER"</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d3">1</data>
+      <data key="d4">30</data>
+      <data key="d5">76934625d5a041f9afde33f4e0dc79ca</data>
+    </node>
+    <edge source="&quot;POLAND&quot;" target="&quot;FR&#201;D&#201;RIC CHOPIN&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Chopin is a symbol of Polish cultural identity"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">4157aff7796f46d09aa054d2c926d49d</data>
+      <data key="d12">0</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="&quot;PARIS&quot;" target="&quot;FR&#201;D&#201;RIC CHOPIN&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Chopin returned to Paris in 1849"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">022e414d04584fffb875c81ac407a190</data>
+      <data key="d12">1</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="&quot;CHOPIN&quot;" target="&quot;MOZART&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Mozart's Requiem was performed at Chopin's funeral"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">84e9fd56acbe42ac9732663b8bd42356</data>
+      <data key="d12">2</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="&quot;TUBERCULOSIS&quot;" target="&quot;FR&#201;D&#201;RIC CHOPIN&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Chopin likely died from complications of tuberculosis"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">b0505aa656a0416fb8e6ec23a399008a</data>
+      <data key="d12">3</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="&quot;FR&#201;D&#201;RIC CHOPIN&quot;" target="&quot;ENGLAND&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Chopin traveled to England in 1848"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">7988e8c53a704905a5e887fe3e8a2137</data>
+      <data key="d12">4</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="&quot;FR&#201;D&#201;RIC CHOPIN&quot;" target="&quot;SCOTLAND&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Chopin traveled to Scotland in 1848"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">40ecd56ff31843ef8b54fb7b14c9f4fd</data>
+      <data key="d12">5</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="&quot;FR&#201;D&#201;RIC CHOPIN&quot;" target="&quot;CHURCH OF THE MADELEINE&quot;">
+      <data key="d8">1.0</data>
+      <data key="d9">"Chopin's funeral was held at the Church of the Madeleine"</data>
+      <data key="d10">1a3eeb28ff7fb905559aabfc2b7765e3</data>
+      <data key="d11">99cbe322a2de4fa0a59e6fe93189a49d</data>
+      <data key="d12">6</data>
+      <data key="d13">0</data>
+    </edge>
+  </graph>
+</graphml>

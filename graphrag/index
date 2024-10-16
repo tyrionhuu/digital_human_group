@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Ensure Conda is initialized
+source ~/anaconda3/etc/profile.d/conda.sh
+
+# Activate the graphrag Conda environment
+conda activate ppt
+
+# Define usage function
+usage() {
+    echo "Usage: $0 [--init] [--prompt-tune]"
+    echo "    --init         Initialize graphrag indexing"
+    echo "    --prompt-tune  Run prompt tuning"
+    exit 1
+}
+
+# Parse command-line arguments
+INIT=false
+PROMPT_TUNE=false
+
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --init) INIT=true ;;
+        --prompt-tune) PROMPT_TUNE=true ;;
+        *) usage ;;
+    esac
+    shift
+done
+
+# Perform initialization if requested
+if $INIT; then
+    python -m graphrag.index --init --root ~/digital_human_group/graphrag
+fi
+
+# Perform prompt tuning if requested
+if $PROMPT_TUNE; then
+    python -m graphrag.prompt_tune --root ~/digital_human_group/graphrag --config~/digital_human_group/graphrag/settings.yaml --no-entity-types
+fi
+
+# Always run indexing after any optional tasks
+python -m graphrag.index --root ~/digital_human_group/graphrag

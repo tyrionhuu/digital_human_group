@@ -1,0 +1,17 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="FRIEDRICH CHOPIN">
+      <data key="d0">PERSON</data>
+      <data key="d1"> Friedrich Chopin, a Polish composer and virtuoso pianist, was a pivotal figure in the Romantic era. Born in Poland, he lived under Russian control during his lifetime but managed to infuse his music with the spirit of his homeland. His compositions, particularly his piano works, are considered quintessential examples of the Romantic period. Tragically, Chopin succumbed to complications from tuberculosis at a relatively young age, leaving behind an indelible mark on Western classical music.</data>
+      <data key="d2">1a3eeb28ff7fb905559aabfc2b7765e3,5b2f6049ae92b2d41fd9160460e4ae93,68ee24a2a3ea3192166a573e835476e4,7d3db04545c80c1b6b664b577f45c2b9,8a98ffcc7965fe99d82840393f6b4715,a3899caacb28ea9fc97e6d3208d6508b</data>
+    </node>
+    <node id="JOZEF ELSNER">
+      <data key="d0">PERSON</data>
+      <data key="d1">Teacher of Chopin at the Warsaw Conservatory</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4,8a98ffcc7965fe99d82840393f6b4715</data>
+    </node>
+  </graph>
+</graphml>

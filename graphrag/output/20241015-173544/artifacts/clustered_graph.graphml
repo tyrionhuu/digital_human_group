@@ -1,0 +1,167 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d13" for="edge" attr.name="level" attr.type="long" />
+  <key id="d12" for="edge" attr.name="human_readable_id" attr.type="long" />
+  <key id="d11" for="edge" attr.name="id" attr.type="string" />
+  <key id="d10" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d9" for="edge" attr.name="description" attr.type="string" />
+  <key id="d8" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d7" for="node" attr.name="level" attr.type="long" />
+  <key id="d6" for="node" attr.name="cluster" attr.type="string" />
+  <key id="d5" for="node" attr.name="id" attr.type="string" />
+  <key id="d4" for="node" attr.name="human_readable_id" attr.type="long" />
+  <key id="d3" for="node" attr.name="degree" attr.type="long" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="NICOLAS CHOPIN">
+      <data key="d0">PERSON</data>
+      <data key="d1">Father of Fr&#233;d&#233;ric Fran&#231;ois Chopin</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">0</data>
+      <data key="d5">c621f9b3a59e4e6b9f1bd05d1cb85aba</data>
+    </node>
+    <node id="JUSTYNA CHOPIN">
+      <data key="d0">PERSON</data>
+      <data key="d1">Mother of Fr&#233;d&#233;ric Fran&#231;ois Chopin</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">1</data>
+      <data key="d5">8400d74b965849b788b3e6bf0ca48cad</data>
+    </node>
+    <node id="WARSAW CONSERVATORY">
+      <data key="d0">INSTITUTION</data>
+      <data key="d1">Place where Fr&#233;d&#233;ric Fran&#231;ois Chopin received formal training</data>
+      <data key="d2">68ee24a2a3ea3192166a573e835476e4</data>
+      <data key="d3">0</data>
+      <data key="d4">2</data>
+      <data key="d5">27512f1200dc440a9d30376e01082bce</data>
+    </node>
+    <node id="NEARLY A DECADE">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">3</data>
+      <data key="d5">3dbcc6a29fb4461992bcef96049df765</data>
+    </node>
+    <node id="GEORGE SAND">
+      <data key="d0" />
+      <data key="d1">George Sand was Chopin's romantic partner until their relationship ended in 1847.  
+</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d6">0</data>
+      <data key="d7">0</data>
+      <data key="d3">1</data>
+      <data key="d4">4</data>
+      <data key="d5">489ac26467fa4c148649ba91b63a1ff4</data>
+    </node>
+    <node id="PRODUCTIVE PERIOD">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">1</data>
+      <data key="d4">5</data>
+      <data key="d5">54b78a84a0e6468ca342c940ff805ef1</data>
+    </node>
+    <node id="MAJORCA">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">1</data>
+      <data key="d4">6</data>
+      <data key="d5">a26aca03bb8741cc9ca8976351393597</data>
+    </node>
+    <node id="NOCTURNES">
+      <data key="d0">COMPOSITION</data>
+      <data key="d1">Works by Chopin that were composed during his relationship with George Sand</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">7</data>
+      <data key="d5">9d9e7db51bc9471eba53b344a46c89a8</data>
+    </node>
+    <node id="BALLADES">
+      <data key="d0">COMPOSITION</data>
+      <data key="d1">Works by Chopin that were composed during his relationship with George Sand</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">8</data>
+      <data key="d5">7a40d38d7648422e83381061ec090f2f</data>
+    </node>
+    <node id="MAZURKAS">
+      <data key="d0">COMPOSITION</data>
+      <data key="d1">Works by Chopin that were composed during his relationship with George Sand</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">9</data>
+      <data key="d5">adc995cc6bb44636a4d60776d867205d</data>
+    </node>
+    <node id="&#201;TUDES">
+      <data key="d0">COMPOSITION</data>
+      <data key="d1">Works by Chopin that are both technical exercises and musical masterpieces</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d3">0</data>
+      <data key="d4">10</data>
+      <data key="d5">3b1ce5c194054979af3ae44c6c3d1d46</data>
+    </node>
+    <node id="REVOLUTIONARY &#201;TUDE">
+      <data key="d0">COMPOSITION</data>
+      <data key="d1">A powerful expression of emotion by Chopin</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">11</data>
+      <data key="d5">0e86a92500f94a24bb28cfe01b372068</data>
+    </node>
+    <node id="WINTER WIND &#201;TUDE">
+      <data key="d0">COMPOSITION</data>
+      <data key="d1">A powerful expression of emotion by Chopin</data>
+      <data key="d2">7d3db04545c80c1b6b664b577f45c2b9,a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">12</data>
+      <data key="d5">ef6d3560064e4448bc321046d9ae646d</data>
+    </node>
+    <node id="MAZURKA">
+      <data key="d0">MUSIC GENRE</data>
+      <data key="d1">Traditional Polish dance form used by Chopin</data>
+      <data key="d2">a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">13</data>
+      <data key="d5">6caf1a9271cd4f3498b7bdfd8529914e</data>
+    </node>
+    <node id="POLONAISE">
+      <data key="d0">MUSIC GENRE</data>
+      <data key="d1">Traditional Polish dance form used by Chopin</data>
+      <data key="d2">a3899caacb28ea9fc97e6d3208d6508b</data>
+      <data key="d3">0</data>
+      <data key="d4">14</data>
+      <data key="d5">4619251258f74e3c81d4a1d6321efe8e</data>
+    </node>
+    <node id="CHOPIN">
+      <data key="d0">PERSON</data>
+      <data key="d1">Polish composer and pianist</data>
+      <data key="d2">5b2f6049ae92b2d41fd9160460e4ae93</data>
+      <data key="d3">0</data>
+      <data key="d4">15</data>
+      <data key="d5">29c1310034ff4fbbbf3d702383f7093f</data>
+    </node>
+    <edge source="NEARLY A DECADE" target="GEORGE SAND">
+      <data key="d8">1.0</data>
+      <data key="d9">FR&#201;D&#201;RIC CHOPIN</data>
+      <data key="d10">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d11">f8ea96ce2da84674a5a7a6152a295883</data>
+      <data key="d12">0</data>
+      <data key="d13">0</data>
+    </edge>
+    <edge source="PRODUCTIVE PERIOD" target="MAJORCA">
+      <data key="d8">1.0</data>
+      <data key="d9">FR&#201;D&#201;RIC CHOPIN</data>
+      <data key="d10">7d3db04545c80c1b6b664b577f45c2b9</data>
+      <data key="d11">1f9d65a361de41238599fcd8ad0862a0</data>
+      <data key="d12">1</data>
+      <data key="d13">0</data>
+    </edge>
+  </graph>
+</graphml>
