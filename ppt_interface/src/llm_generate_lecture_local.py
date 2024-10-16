@@ -135,5 +135,5 @@ def main(input_file):
 
 
 if __name__ == "__main__":
-    input_file = '../test/test.xml'  # Modify the path as needed
+    input_file = '../test/ML-Topic1A.xml'  # Modify the path as needed
     main(input_file)
