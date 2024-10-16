@@ -1,0 +1,255 @@
+<?xml version="1.0" ?>
+<presentation>
+  <slide number="1">
+    <title>CHAPTER 1: Introduction</title>
+    <paragraph type="normal">CHAPTER 1: Introduction</paragraph>
+  </slide>
+  <slide number="2">
+    <title>Why “Learn”?</title>
+    <paragraph type="normal">2</paragraph>
+    <paragraph type="normal">Why “Learn”?</paragraph>
+    <paragraph type="normal">Machine learning is programming computers to optimize a performance criterion using example data or past experience.</paragraph>
+    <paragraph type="normal">There is no need to “learn” to calculate payroll</paragraph>
+    <paragraph type="normal">Learning is used when:</paragraph>
+    <paragraph type="bullet" level="1">Human expertise does not exist (navigating on Mars),</paragraph>
+    <paragraph type="bullet" level="1">Humans are unable to explain their expertise (speech recognition)</paragraph>
+    <paragraph type="bullet" level="1">Solution changes in time (routing on a computer network)</paragraph>
+    <paragraph type="bullet" level="1">Solution needs to be adapted to particular cases (user biometrics)</paragraph>
+  </slide>
+  <slide number="3">
+    <title>What We Talk About When We Talk About“Learning”</title>
+    <paragraph type="normal">3</paragraph>
+    <paragraph type="normal">What We Talk About When We Talk About“Learning”</paragraph>
+    <paragraph type="normal">Learning general models from a data of particular examples </paragraph>
+    <paragraph type="normal">Data is cheap and abundant (data warehouses, data marts); knowledge is expensive and scarce. </paragraph>
+    <paragraph type="normal">Example in retail: Customer transactions to consumer behavior: </paragraph>
+    <paragraph type="bullet" level="1">People who bought “Da Vinci Code” also bought “The Five People You Meet in Heaven” (www.amazon.com)</paragraph>
+    <paragraph type="normal">Build a model that is a good and useful approximation to the data. </paragraph>
+  </slide>
+  <slide number="4">
+    <title>Data Mining/KDD</title>
+    <paragraph type="normal">4</paragraph>
+    <paragraph type="normal">Data Mining/KDD</paragraph>
+    <paragraph type="normal">Retail: Market basket analysis, Customer relationship management (CRM)</paragraph>
+    <paragraph type="normal">Finance: Credit scoring, fraud detection</paragraph>
+    <paragraph type="normal">Manufacturing: Optimization, troubleshooting</paragraph>
+    <paragraph type="normal">Medicine: Medical diagnosis</paragraph>
+    <paragraph type="normal">Telecommunications: Quality of service optimization</paragraph>
+    <paragraph type="normal">Bioinformatics: Motifs, alignment</paragraph>
+    <paragraph type="normal">Web mining: Search engines</paragraph>
+    <paragraph type="normal">...</paragraph>
+    <paragraph type="normal">Definition := “KDD is the non-trivial process of </paragraph>
+    <paragraph type="normal">identifying valid, novel, potentially useful, and </paragraph>
+    <paragraph type="normal">ultimately understandable patterns in data” (Fayyad)</paragraph>
+    <paragraph type="normal">Applications: </paragraph>
+  </slide>
+  <slide number="5">
+    <title>What is Machine Learning?</title>
+    <paragraph type="normal">5</paragraph>
+    <paragraph type="normal">What is Machine Learning?</paragraph>
+    <paragraph type="normal">Machine Learning</paragraph>
+    <paragraph type="bullet" level="1">Study of algorithms that</paragraph>
+    <paragraph type="bullet" level="1">improve their performance</paragraph>
+    <paragraph type="bullet" level="1">at some task</paragraph>
+    <paragraph type="bullet" level="1">with experience</paragraph>
+    <paragraph type="normal">Optimize a performance criterion using example data or past experience.</paragraph>
+    <paragraph type="normal">Role of Statistics: Inference from a sample</paragraph>
+    <paragraph type="normal">Role of Computer science: Efficient algorithms to</paragraph>
+    <paragraph type="bullet" level="1">Solve the optimization problem</paragraph>
+    <paragraph type="bullet" level="1">Representing and evaluating the model for inference</paragraph>
+  </slide>
+  <slide number="6">
+    <title>Growth of Machine Learning</title>
+    <paragraph type="normal">Growth of Machine Learning</paragraph>
+    <paragraph type="normal">Machine learning is preferred approach to</paragraph>
+    <paragraph type="bullet" level="1">Speech recognition, Natural language processing</paragraph>
+    <paragraph type="bullet" level="1">Computer vision</paragraph>
+    <paragraph type="bullet" level="1">Medical outcomes analysis</paragraph>
+    <paragraph type="bullet" level="1">Robot control</paragraph>
+    <paragraph type="bullet" level="1">Computational biology</paragraph>
+    <paragraph type="normal">This trend is accelerating</paragraph>
+    <paragraph type="bullet" level="1">Improved machine learning algorithms</paragraph>
+    <paragraph type="bullet" level="1">Improved data capture, networking, faster computers</paragraph>
+    <paragraph type="bullet" level="1">Software too complex to write by hand</paragraph>
+    <paragraph type="bullet" level="1">New sensors / IO devices</paragraph>
+    <paragraph type="bullet" level="1">Demand for self-customization to user, environment</paragraph>
+    <paragraph type="bullet" level="1">It turns out to be difficult to extract knowledge from human expertsfailure of expert systems in the 1980’s.</paragraph>
+    <paragraph type="normal">Alpydin &amp;amp; Ch. Eick: ML Topic1</paragraph>
+    <paragraph type="normal">6</paragraph>
+  </slide>
+  <slide number="7">
+    <title>Applications</title>
+    <paragraph type="normal">7</paragraph>
+    <paragraph type="normal">Applications</paragraph>
+    <paragraph type="normal">Association Analysis</paragraph>
+    <paragraph type="normal">Supervised Learning</paragraph>
+    <paragraph type="bullet" level="1">Classification</paragraph>
+    <paragraph type="bullet" level="1">Regression/Prediction </paragraph>
+    <paragraph type="normal">Unsupervised Learning</paragraph>
+    <paragraph type="normal">Reinforcement Learning</paragraph>
+  </slide>
+  <slide number="8">
+    <title>Learning Associations</title>
+    <paragraph type="normal">Learning Associations</paragraph>
+    <paragraph type="normal">Basket analysis: </paragraph>
+    <paragraph type="normal">P (Y | X ) probability that somebody who buys X also buys Y where X and Y are products/services.</paragraph>
+    <paragraph type="normal">Example: P ( chips | beer ) = 0.7</paragraph>
+    <paragraph type="normal">Market-Basket transactions</paragraph>
+  </slide>
+  <slide number="9">
+    <title>Classification</title>
+    <paragraph type="normal">9</paragraph>
+    <image number="2"> The image is a scatter plot with an overlaid histogram. It shows the relationship between two variables on a linear scale, possibly representing investment or capital accumulation and risk. There are two sets of data represented by different colored dots. One set has red dots, and the other set has blue dots. The red dots seem to cluster more towards the high end of the independent variable (on the horizontal axis) than the blue dots, which are scattered across a wider range of values for the independent variable. On the vertical axis, there's a histogram with three distinct peaks, suggesting that there is a higher concentration of data points at certain levels of investment or capital accumulation. The histogram indicates that while there are fewer observations in the lower and upper tails, the majority of the observations tend to cluster around specific values of the independent variable. The title &quot;Low-risk&quot; implies that the red dots represent data points associated with low risk, which could be related to a more conservative investment strategy or a less volatile asset. The title &quot;High-risk&quot; indicates that the blue dots represent data points associated with higher risk, suggesting a greater possibility of loss but also potentially higher returns. The plot includes an arrow labeled with the number &quot;0,&quot; pointing towards the origin where both variables are zero. This could indicate a specific point of interest or comparison between the two datasets. The background of the image is white, and there's a faint grid indicating that the data points represent discrete values along both axes. Overall, the image is a graphical representation of statistical analysis using a scatter plot and histogram to visualize and analyze a dataset. </image>
+    <paragraph type="normal">Classification</paragraph>
+    <paragraph type="normal">Example: Credit scoring</paragraph>
+    <paragraph type="normal">Differentiating between low-risk and high-risk customers from their income and savings</paragraph>
+    <paragraph type="normal">Discriminant: IF income &amp;gt; θ1 AND savings &amp;gt; θ2 </paragraph>
+    <paragraph type="normal">THEN low-risk ELSE high-risk</paragraph>
+    <paragraph type="normal">Model</paragraph>
+  </slide>
+  <slide number="10">
+    <title>Classification: Applications</title>
+    <paragraph type="normal">10</paragraph>
+    <paragraph type="normal">Classification: Applications</paragraph>
+    <paragraph type="normal">Aka Pattern recognition</paragraph>
+    <paragraph type="normal">Face recognition: Pose, lighting, occlusion (glasses, beard), make-up, hair style </paragraph>
+    <paragraph type="normal">Character recognition: Different handwriting styles.</paragraph>
+    <paragraph type="normal">Speech recognition: Temporal dependency. </paragraph>
+    <paragraph type="bullet" level="1">Use of a dictionary or the syntax of the language. </paragraph>
+    <paragraph type="bullet" level="1">Sensor fusion: Combine multiple modalities; eg, visual (lip image) and acoustic for speech</paragraph>
+    <paragraph type="normal">Medical diagnosis: From symptoms to illnesses</paragraph>
+    <paragraph type="normal">Web Advertizing: Predict if a user clicks on an ad on the Internet.</paragraph>
+  </slide>
+  <slide number="11">
+    <title>Face Recognition</title>
+    <paragraph type="normal">11</paragraph>
+    <paragraph type="normal">Face Recognition</paragraph>
+    <image number="3"> This is a composite image featuring two separate photographs. On the left side, there's an up-close portrait of a person with short hair, wearing what appears to be a suit or shirt with rolled-up sleeves. The individual has a neutral expression and is looking directly at the camera. On the right side, there's a smaller inset image of the same individual from the left, but this one is a black and white photo that seems less detailed than the color portrait on the left. Both images are set against a plain background. The style of the image suggests it might be used for an identification purpose or as part of a professional profile. </image>
+    <image number="4"> The image is a split-style photograph with two sections. On the left side, there's an artistic representation of a man, depicted in black and white with shading to enhance the facial features. This artwork shows a side profile of a man with light skin, fair hair, and focused eyebrows looking off to the side. The right side is a color photograph of the same individual who appears to be a young adult male. His expression is neutral with slightly downturned lips, and he is looking directly at the camera. Both images share a similar hairstyle and attire, suggesting they might be from the same event or time period. </image>
+    <image number="5"> This is a photograph of a person. The individual appears to be male, with short hair and a somewhat displeased or neutral expression. He has a fair complexion and his body language suggests a casual pose. In the background, there's a plain, solid color that provides a high contrast to the subject, focusing attention on him. There is no visible text within the image. </image>
+    <image number="6"> The image is a vertical split of two photographs. On the left, there is a photograph of a person with light skin and short hair. This individual appears to be indoors with a neutral background. The person on the right is looking slightly to their right with a neutral expression. There are no visible texts or distinguishing marks that provide further information about the individuals in these photos. </image>
+    <image number="7"> This is a photograph of an individual. The person appears to be male, with short hair and is wearing what seems to be a light-colored shirt. He has a neutral expression on his face and is looking directly at the camera. In the background, there's a gradient transitioning from a lighter color at the top to a darker hue towards the bottom of the image. The lighting suggests an indoor setting with artificial lighting. </image>
+    <image number="8"> This image is a photograph of an individual who appears to be male. He has light-colored hair, glasses, and is wearing a casual turtleneck or collared shirt with no tie. The person's expression is neutral, and he looks directly at the camera. The background is out of focus, emphasizing the subject in the foreground. There is a gray, gradient overlay on the image that fades from white to darker gray. This type of overlay is often used in visual media to draw attention to the subject. The bottom of the image has text which appears to be part of an interface or application, but it's not legible due to the blurred background and focus on the person. The style of the photograph suggests it could be a stock photo or from an online profile given the overlay effect. </image>
+    <image number="9"> The image appears to be a mugshot of an individual, likely for law enforcement purposes. The person in the photo is a female with fair skin. She has dark hair parted on the left side and bangs that cover her forehead. Her facial expression is neutral, and she looks directly at the camera. She is wearing makeup, including lipstick, which suggests a level of personal grooming. Her eyebrows are well-defined, and her eyelashes are visible. She has a mole on her left cheek, near the corner of her mouth. The individual is wearing a dark top with a collar that appears to be made of a light fabric. The lighting in the image is subdued, casting soft shadows on her face. In the background of the photo, there's a plain wall, which is typical for mugshot photographs to avoid distractions from the subject. There are no visible texts or additional objects in the image. </image>
+    <image number="10"> The image is a portrait-style photograph featuring an adult woman who appears to be smiling at the camera. She has light skin and short, blonde hair. Her expression is calm with a hint of playfulness. She's wearing a white top with a scoop neckline. In the background, there's a subtle gradient that goes from darker tones near the edges to lighter ones near the center. The image has a watermark or logo across it, suggesting it may be associated with a company, brand, or entity, but without specific text, it is not possible to identify who or what the watermark represents. </image>
+    <paragraph type="normal">Training examples of a person</paragraph>
+    <paragraph type="normal">Test images</paragraph>
+    <paragraph type="normal">AT&amp;amp;T Laboratories, Cambridge UK</paragraph>
+    <paragraph type="normal">http://www.uk.research.att.com/facedatabase.html</paragraph>
+  </slide>
+  <slide number="12">
+    <paragraph type="normal">12</paragraph>
+    <image number="2"> The image is a grayscale plot graph, which appears to be from an academic or technical publication. It features a two-dimensional scatter plot with multiple data points plotted against two axes labeled as 'x' and 'y'. The data points are represented by filled circles that have red crosses over them, indicating some form of emphasis or error bars in the context of statistical analysis. There is no visible legend to explain the significance of these crosses. The plot contains a straight line, possibly representing a linear regression or correlation, which passes through several of the data points. The line has a positive slope, indicating a generally upward trend in the data. The red crosses are spaced out along the length of the line. Below the scatter plot, there is a horizontal axis with numerical values ranging from 0 to approximately 50 on the right side. Above this horizontal axis, there is a vertical axis labeled 'y' which also ranges from 0 to around 50. There are no axes labels or titles that provide information about the data being plotted. The background of the image is plain white, and there is a watermark or text at the bottom right corner that is too small to read clearly. The style of the image suggests it is meant for technical or educational purposes, likely to illustrate a statistical relationship between two variables in the context of a research study or theoretical model. </image>
+    <paragraph type="normal">Prediction: Regression</paragraph>
+    <paragraph type="normal">Example: Price of a used car</paragraph>
+    <paragraph type="normal">x : car attributes</paragraph>
+    <paragraph type="normal">y : price</paragraph>
+    <paragraph type="normal">y = g (x | θ )</paragraph>
+    <paragraph type="normal">g ( ) model,</paragraph>
+    <paragraph type="normal">θ parameters</paragraph>
+    <paragraph type="normal">y = wx+w0</paragraph>
+  </slide>
+  <slide number="13">
+    <title>Regression Applications</title>
+    <paragraph type="normal">13</paragraph>
+    <paragraph type="normal">Regression Applications</paragraph>
+    <paragraph type="normal">Navigating a car: Angle of the steering wheel (CMU NavLab)</paragraph>
+    <paragraph type="normal">Kinematics of a robot arm</paragraph>
+    <paragraph type="normal">α1= g1(x,y)</paragraph>
+    <paragraph type="normal">α2= g2(x,y)</paragraph>
+  </slide>
+  <slide number="14">
+    <title>Supervised Learning: Uses</title>
+    <paragraph type="normal">14</paragraph>
+    <paragraph type="normal">Supervised Learning: Uses</paragraph>
+    <paragraph type="normal">Prediction of future cases: Use the rule to predict the output for future inputs</paragraph>
+    <paragraph type="normal">Knowledge extraction: The rule is easy to understand</paragraph>
+    <paragraph type="normal">Compression: The rule is simpler than the data it explains</paragraph>
+    <paragraph type="normal">Outlier detection: Exceptions that are not covered by the rule, e.g., fraud</paragraph>
+    <paragraph type="normal">Example: decision trees tools that create rules</paragraph>
+  </slide>
+  <slide number="15">
+    <title>Unsupervised Learning</title>
+    <paragraph type="normal">15</paragraph>
+    <paragraph type="normal">Unsupervised Learning</paragraph>
+    <paragraph type="normal">Learning “what normally happens”</paragraph>
+    <paragraph type="normal">No output</paragraph>
+    <paragraph type="normal">Clustering: Grouping similar instances</paragraph>
+    <paragraph type="normal">Other applications: Summarization, Association Analysis</paragraph>
+    <paragraph type="normal">Example applications</paragraph>
+    <paragraph type="bullet" level="1">Customer segmentation in CRM</paragraph>
+    <paragraph type="bullet" level="1">Image compression: Color quantization</paragraph>
+    <paragraph type="bullet" level="1">Bioinformatics: Learning motifs</paragraph>
+  </slide>
+  <slide number="16">
+    <title>Reinforcement Learning</title>
+    <paragraph type="normal">16</paragraph>
+    <paragraph type="normal">Reinforcement Learning</paragraph>
+    <paragraph type="normal">Topics:</paragraph>
+    <paragraph type="bullet" level="1">Policies: what actions should an agent take in a particular situation</paragraph>
+    <paragraph type="bullet" level="1">Utility estimation: how good is a state (used by policy)</paragraph>
+    <paragraph type="normal">No supervised output but delayed reward</paragraph>
+    <paragraph type="normal">Credit assignment problem (what was responsible for the outcome) </paragraph>
+    <paragraph type="normal">Applications: </paragraph>
+    <paragraph type="bullet" level="1">Game playing</paragraph>
+    <paragraph type="bullet" level="1">Robot in a maze</paragraph>
+    <paragraph type="bullet" level="1">Multiple agents, partial observability, ...</paragraph>
+  </slide>
+  <slide number="17">
+    <title>Resources: Datasets</title>
+    <paragraph type="normal">17</paragraph>
+    <paragraph type="normal">Resources: Datasets</paragraph>
+    <paragraph type="normal">UCI Repository: http://www.ics.uci.edu/~mlearn/MLRepository.html</paragraph>
+    <paragraph type="normal">UCI KDD Archive: http://kdd.ics.uci.edu/summary.data.application.html</paragraph>
+    <paragraph type="normal">Statlib: http://lib.stat.cmu.edu/</paragraph>
+    <paragraph type="normal">Delve: http://www.cs.utoronto.ca/~delve/</paragraph>
+  </slide>
+  <slide number="18">
+    <title>Resources: Journals</title>
+    <paragraph type="normal">18</paragraph>
+    <paragraph type="normal">Resources: Journals</paragraph>
+    <paragraph type="normal">Journal of Machine Learning Research www.jmlr.org</paragraph>
+    <paragraph type="normal">Machine Learning </paragraph>
+    <paragraph type="normal">IEEE Transactions on Neural Networks</paragraph>
+    <paragraph type="normal">IEEE Transactions on Pattern Analysis and Machine Intelligence</paragraph>
+    <paragraph type="normal">Annals of Statistics</paragraph>
+    <paragraph type="normal">Journal of the American Statistical Association</paragraph>
+    <paragraph type="normal">...</paragraph>
+  </slide>
+  <slide number="19">
+    <title>Resources: Conferences</title>
+    <paragraph type="normal">19</paragraph>
+    <paragraph type="normal">Resources: Conferences</paragraph>
+    <paragraph type="normal">International Conference on Machine Learning (ICML) </paragraph>
+    <paragraph type="normal">European Conference on Machine Learning (ECML)</paragraph>
+    <paragraph type="normal">Neural Information Processing Systems (NIPS)</paragraph>
+    <paragraph type="normal">Computational Learning </paragraph>
+    <paragraph type="normal">International Joint Conference on Artificial Intelligence (IJCAI)</paragraph>
+    <paragraph type="normal">ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</paragraph>
+    <paragraph type="normal">IEEE Int. Conf. on Data Mining (ICDM)</paragraph>
+  </slide>
+  <slide number="20">
+    <title>Summary COSC 6342 </title>
+    <paragraph type="normal">Summary COSC 6342 </paragraph>
+    <paragraph type="normal">Introductory course that covers a wide range of machine learning techniques—from basic to state-of-the-art.</paragraph>
+    <paragraph type="normal">More theoretical/statistics oriented, compared to other courses I teach might need continuous work not “to get lost”. </paragraph>
+    <paragraph type="normal"> You will learn about the methods you heard about: Naïve Bayes’, belief networks, regression, nearest-neighbor (kNN), decision trees, support vector machines, learning ensembles, over-fitting, regularization, dimensionality reduction &amp;amp; PCA, error bounds, parameter estimation, mixture models, comparing models, density estimation, clustering centering on K-means, EM, and DBSCAN, active and reinforcement learning.</paragraph>
+    <paragraph type="normal">Covers algorithms, theory and applications</paragraph>
+    <paragraph type="normal">It’s going to be fun and hard work </paragraph>
+    <paragraph type="normal">Alpydin &amp;amp; Ch. Eick: ML Topic1</paragraph>
+    <paragraph type="normal">20</paragraph>
+  </slide>
+  <slide number="21">
+    <title>Which Topics Deserve More Coverage—if we had more time?</title>
+    <paragraph type="normal">Which Topics Deserve More Coverage—if we had more time?</paragraph>
+    <paragraph type="normal">Graphical Models/Belief Networks (just ran out of time)</paragraph>
+    <paragraph type="normal">More on Adaptive Systems</paragraph>
+    <paragraph type="normal">Learning Theory</paragraph>
+    <paragraph type="normal">More on Clustering and Association Analysiscovered by Data Mining Course</paragraph>
+    <paragraph type="normal">More on Feature Selection, Feature Creation </paragraph>
+    <paragraph type="normal">More on Prediction </paragraph>
+    <paragraph type="normal">Possibly: More depth coverage of optimization techniques, neural networks, hidden Markov models, how to conduct a machine learning experiment, comparing machine learning algorithms,…</paragraph>
+    <paragraph type="normal">Alpydin &amp;amp; Ch. Eick: ML Topic1</paragraph>
+    <paragraph type="normal">21</paragraph>
+  </slide>
+</presentation>

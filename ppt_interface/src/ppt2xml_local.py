@@ -5,7 +5,7 @@ from xml.sax.saxutils import escape
 from xml.dom import minidom
 import os
 import ollama
-
+IMAGE_DIR = "../test/images"
 def call_llava(image_path):
     """
     Calls the LLaVA model via Ollama API to describe images, charts, or tables.
@@ -34,6 +34,20 @@ def filter_text(text):
     cleaned_text = re.sub(r'[\x00-\x1F\x7F]', '', text)  # Remove control characters
     return cleaned_text
 
+def save_image_from_shape(shape, slide_num, shape_num, output_dir=IMAGE_DIR):
+    """Save an image from a shape to a file."""
+    if not hasattr(shape, 'image'):
+        return None
+
+    image = shape.image
+    image_filename = f"slide_{slide_num}_shape_{shape_num}.{image.ext}"
+    image_path = os.path.join(output_dir, image_filename)
+
+    # Save the image blob to a file
+    with open(image_path, 'wb') as f:
+        f.write(image.blob)
+
+    return image_path
 def ppt2xml(ppt_file, xml_file):
     # Load the PowerPoint presentation
     prs = Presentation(ppt_file)
@@ -44,7 +58,6 @@ def ppt2xml(ppt_file, xml_file):
     # Loop through each slide in the presentation
     for slide_num, slide in enumerate(prs.slides, start=1):
         slide_element = ET.SubElement(root, 'slide', number=str(slide_num))
-
         # Get the title of the slide
         title = ''
         if slide.shapes.title:
@@ -58,6 +71,7 @@ def ppt2xml(ppt_file, xml_file):
 
         # Loop through each shape in the slide to capture bullet points, content, and images
         for shape_num, shape in enumerate(slide.shapes, start=1):
+            print(shape)
             if not hasattr(shape, 'has_text_frame') and not hasattr(shape, 'has_image'):
                 continue  # Skip shapes without text or images
 
@@ -83,23 +97,14 @@ def ppt2xml(ppt_file, xml_file):
                     # Assign the filtered text to the paragraph element
                     content_element.text = escape(para_text)
 
-            # Handle images, charts, and tables (assumed to be images here)
-            if hasattr(shape, 'has_image') and shape.has_image:
-                # Extract the image and save it to a temporary file
-                image = shape.image
-                image_filename = f"slide_{slide_num}_shape_{shape_num}.png"
-                image_path = os.path.join("temp_images", image_filename)
-
-                # Save the image to a file
-                with open(image_path, 'wb') as f:
-                    f.write(image.blob)
-
-                # Call LLaVA to recognize the image, chart, or table
-                description = call_llava(image_path)
-
-                # Add an element to the XML for the image description
-                image_element = ET.SubElement(slide_element, 'image', number=str(shape_num))
-                image_element.text = escape(description)
+            # Handle image shapes
+            if hasattr(shape, 'image'):
+                image_path = save_image_from_shape(shape, slide_num, shape_num)
+                if image_path:
+                    # Call LLaVA to get the description of the image
+                    description = call_llava(image_path)
+                    image_element = ET.SubElement(slide_element, 'image', number=str(shape_num))
+                    image_element.text = escape(description)
 
     # Create an ElementTree object and write to the XML file
     try:
@@ -166,9 +171,10 @@ def find_error_in_xml(xml_file):
             # Optionally highlight the problematic part
             print(" " * (column_number - 1) + "^")  # Print caret under the problematic character
 
+
 def main():
-    ppt_file_path = '../test/test.pptx'  # Modify the path as needed
-    xml_file_path = '../test/test.xml'   # Modify the path as needed
+    ppt_file_path = '../test/ML-Topic1A.pptx'  # Modify the path as needed
+    xml_file_path = '../test/ML-Topic1A.xml'   # Modify the path as needed
 
     ppt2xml(ppt_file_path, xml_file_path)
     find_error_in_xml(xml_file_path)
